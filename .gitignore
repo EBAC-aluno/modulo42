@@ -1,0 +1,13 @@
+*.project
+*.classpath
+*.factorypath
+*.project
+*.settings
+*.jar
+*.bin
+*.class
+*.class.*
+*.properties
+*resolvedMainClassName
+*.lock
+*.probe
