@@ -8,6 +8,7 @@ import dev.pedrolobo.productservice.dto.ProductRequest;
 import dev.pedrolobo.productservice.dto.ProductResponse;
 import dev.pedrolobo.productservice.model.Product;
 import dev.pedrolobo.productservice.repository.IProductRepository;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -33,13 +34,44 @@ public class ProductService {
     return products.stream().map(product -> mapToResponse(product)).toList();
   }
 
+  public ProductResponse getById(Long id) {
+    return mapToResponse(productRepository.findById(id).get());
+  }
+
+  public void deleteById(Long id) {
+    productRepository.deleteById(id);
+  }
+
   private ProductResponse mapToResponse(Product product) {
     return ProductResponse.builder()
-      .id(product.getId())
-      .name(product.getName())
-      .description(product.getDescription())
-      .price(product.getPrice())
-      .build();
+        .id(product.getId())
+        .name(product.getName())
+        .description(product.getDescription())
+        .price(product.getPrice())
+        .build();
+  }
+
+  public boolean existsById(Long id) {
+    return productRepository.existsById(id);
+  }
+
+  public void update(@Valid ProductRequest productRequest, Long id) {
+    productRepository.save(mapProductToEntity(productRequest, id));
+  }
+
+  private Product buildProduct(ProductRequest productRequest) {
+    Product product = Product.builder()
+        .name(productRequest.getName())
+        .description(productRequest.getDescription())
+        .price(productRequest.getPrice())
+        .build();
+    return product;
+  }
+
+  private Product mapProductToEntity(ProductRequest productRequest, Long id) {
+    Product product = buildProduct(productRequest);
+    product.setId(id);
+    return product;
   }
 
 }
