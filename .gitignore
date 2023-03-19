@@ -7,10 +7,11 @@
 *.bin
 *.class
 *.class.*
-*.properties
 *resolvedMainClassName
 *.lock
 *.probe
+*.properties
+*.yml
 
 # Ignore Gradle project-specific cache directory
 .gradle
