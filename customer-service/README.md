@@ -1,18 +1,18 @@
 curl -X POST -H "Content-Type: application/json" -d '{
-        "name": "Maria da silva",
-        "gender": "FEMALE",
-        "email": "mariadasilva@gmail.com",
-        "telephone": "43 9 9887 9988", 
-        "birthDay": "1998-02-12",
+        "name": "Andre da Silva",
+        "gender": "MALE",
+        "email": "andredasilva@gmail.com",
+        "telephone": "31 9 9999 0001", 
+        "birthDay": "1999-01-23",
         "address": {
-                "streetName": "Avenida Getúlio Vargas",
-        	    "houseNumber": "34",
-        	    "neighborhoodName": "Setor Central",
-        	    "cityName": "Alto Horizonte",
-        	    "state": "GO",
-        	    "zipCode":"76579-970"
+                "streetName": "Rua das Palmeiras",
+        	    "houseNumber": "145",
+        	    "neighborhoodName": "Barra",
+        	    "cityName": "Rio Grande",
+        	    "state": "RG",
+        	    "zipCode":"43222-971"
    		}
-}' http://localhost:8081/api/customer-service
+}' http://localhost:9094/api/customer-service
 
 PUT
 
@@ -30,9 +30,12 @@ curl -X PUT -H "Content-Type: application/json" -d '{
         	    "state": "MT",
         	    "zipCode":"76579-970"
    		}
-}' http://localhost:8081/api/customer-service/1
+}' http://localhost:9094/api/customer-service/1
 
-curl -X DELETE http://localhost:8081/api/customer-service/1
+curl -X DELETE http://localhost:9094/api/customer-service/1
+
+curl http://localhost:9094/api/customer-service
+curl http://localhost:9094/api/customer-service/1
 
 
 spring.jpa.hibernate.ddl-auto=update
