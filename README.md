@@ -10,7 +10,7 @@ For product and customer services, you need to create MySQL databases and grant 
 The gateway and discovery server use ports `8083` and `8090`, respectively, but you can change these values if they are already in use by modifying the `application.yaml` file in the root of these folders.
 
 > [!IMPORTANT]
-> The discovery server must be started first, followed by the customer, product, and gateway : > > services, without any particular order.
+> The discovery server must be started first, followed by the customer, product, and gateway services, without any particular order.
 
 ## Running
 To start the application, navigate to the root of each project and run the following Gradle task:
@@ -19,6 +19,8 @@ To start the application, navigate to the root of each project and run the follo
 ```
 
 ## REST API Methods
+
+### customer-services 
 
 ```bash
 curl -X POST \
@@ -75,7 +77,9 @@ or
 curl -X GET \
   http://localhost:8090/api/customer-service \
   -H 'Content-Type: application/json'
+
 ```
+### product-services 
 ```bash
 curl -X POST \
   http://localhost:8090/api/product-service \
