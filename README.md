@@ -11,14 +11,13 @@ The gateway and discovery server use ports `8083` and `8090`, respectively, but 
 
 If you choose another port for the discovery server, you will also need to make changes in the `/src/main/resources/application.properties` file for the customer and product services, as well as in the `/src/main/resources/application.yaml` file for the gateway.
 
-> [!IMPORTANT]
-> The discovery server must be started first, followed by the customer, product, and gateway services, without any particular order.
-
 ## Running
 To start the application, navigate to the root of each project and run the following Gradle task:
 ```sh
 ./gradlew bootRun
 ```
+> [!IMPORTANT]
+> The discovery server must be started first, followed by the customer, product, and gateway services, without any particular order.
 
 ## REST API Methods
 
