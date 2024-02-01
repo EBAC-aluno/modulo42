@@ -67,7 +67,7 @@ curl -X POST \
 ```
 ```bash
 curl -X PUT \
-  http://localhost:8090/api/product-service/52 \
+  http://localhost:8090/api/product-service/{id} \
   -H 'Content-Type: application/json' \
   -d '{
 	"name": "backhoe5",
@@ -78,12 +78,12 @@ curl -X PUT \
 ```
 ```bash
 curl -X DELETE \
-  http://localhost:8090/api/product-service/52 \
+  http://localhost:8090/api/product-service/{id} \
   -H 'Content-Type: application/json'
 ```
 ```bash
 curl -X GET \
-  http://localhost:8090/api/product-service/1 \
+  http://localhost:8090/api/product-service/{id} \
   -H 'Content-Type: application/json'
 ```
 or
