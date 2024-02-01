@@ -10,9 +10,6 @@
 *resolvedMainClassName
 *.lock
 *.probe
-*.properties
-*.yml
-*.yaml
 
 # Ignore Gradle project-specific cache directory
 .gradle
