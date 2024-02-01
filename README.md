@@ -1,3 +1,23 @@
+# Simple API
+This is a RESTful API built on microservice architecture.
+
+## Setup
+For product and customer services, you need to create MySQL databases and grant all permissions to the MySQL users. Please modify the file `/src/main/resources/application.properties` by replacing the `{database name}`, `{user name}`, and user `{password}` fields.
+
+NOTE: The default port is `0`, allowing the application to pick up any random available one.
+
+The gateway and discovery server use ports `8083` and `8090`, respectively, but you can change these values if they are already in use by modifying the `application.yaml` file in the root of these folders.
+
+IMPORTANT: The discovery server must be started first, followed by the customer, product, and gateway services, without any particular order.
+
+## Running
+To start the application, navigate to the root of each project and run the following Gradle task:
+```sh
+./gradlew bootRun
+```
+
+## REST API Methods
+
 ```bash
 curl -X POST \
   http://localhost:8090/api/customer-service \
