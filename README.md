@@ -20,7 +20,7 @@ curl -X POST \
 ```
 ```bash
 curl -X PUT \
-  http://localhost:8090/api/customer-service/54 \
+  http://localhost:8090/api/customer-service/{id} \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "Geralda Fuertes",
@@ -39,12 +39,19 @@ curl -X PUT \
 }'
 ```
 ```bash
-curl -X GET \
-  http://localhost:8090/api/customer-service/54 \
+curl -X DELETE \
+  http://localhost:8090/api/customer-service/{id} \
   -H 'Content-Type: application/json'
 ```
 ```bash
-curl -X DELETE \
-  http://localhost:8090/api/customer-service/54 \
+curl -X GET \
+  http://localhost:8090/api/customer-service/{id} \
   -H 'Content-Type: application/json'
 ```
+or
+```bash
+curl -X GET \
+  http://localhost:8090/api/customer-service \
+  -H 'Content-Type: application/json'
+```
+
