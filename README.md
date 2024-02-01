@@ -86,9 +86,9 @@ curl -X GET \
   http://localhost:8090/api/product-service/1 \
   -H 'Content-Type: application/json'
 ```
+or
 ```bash
 curl -X GET \
   http://localhost:8090/api/product-service \
   -H 'Content-Type: application/json'
 ```
-_
