@@ -7,7 +7,7 @@ For product and customer services, you need to create MySQL databases and grant 
 > [!NOTE]
 > The default port is `0`, allowing the application to pick up any random available one.
 
-The gateway and discovery server use ports `8083` and `8090`, respectively, but you can change these values if they are already in use by modifying the `application.yaml` file in the root of these folders related with.
+The gateway and discovery server use ports `8090` and `8083`, respectively, but you can change these values if they are already in use by modifying the `application.yaml` file in the root of these folders related with.
 
 If you choose another port for the discovery server, you will also need to make changes in the `/src/main/resources/application.properties` file for the customer and product services, as well as in the `/src/main/resources/application.yaml` file for the gateway.
 
