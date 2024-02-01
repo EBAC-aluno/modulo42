@@ -29,10 +29,10 @@ curl -X PUT \
     "birthDay": "1998-02-12",
     "telephone": "43 9 9887 9988",
     "address": {
-        "streetName": "Updated Street Name",
+        "streetName": "Avenida Getúlio Vargas",
         "houseNumber": 34,
-        "neighborhoodName": "Updated Neighborhood",
-        "cityName": "Updated City",
+        "neighborhoodName": "Setor Central",
+        "cityName": "Alto Horizonte",
         "state": "GO",
         "zipCode": "76579-970"
     }
