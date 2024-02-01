@@ -20,7 +20,7 @@ To start the application, navigate to the root of each project and run the follo
 
 ## REST API Methods
 
-### customer-services 
+### customer-service
 
 ```bash
 curl -X POST \
@@ -79,7 +79,7 @@ curl -X GET \
   -H 'Content-Type: application/json'
 
 ```
-### product-services 
+### product-service
 ```bash
 curl -X POST \
   http://localhost:8090/api/product-service \
