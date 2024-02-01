@@ -55,3 +55,35 @@ curl -X GET \
   -H 'Content-Type: application/json'
 ```
 
+curl -X POST \
+  http://localhost:8090/api/product-service \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"name": "backhoe",
+	"description": "big yellow machine",
+	"price": "37000"
+    }
+}'
+  
+curl -X PUT \
+  http://localhost:8090/api/product-service/52 \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"name": "backhoe5",
+	"description": "big blue machine",
+	"price": "37000"
+    }
+}'
+
+curl -X DELETE \
+  http://localhost:8090/api/product-service/52 \
+  -H 'Content-Type: application/json'
+  
+curl -X GET \
+  http://localhost:8090/api/product-service/1 \
+  -H 'Content-Type: application/json'
+
+curl -X GET \
+  http://localhost:8090/api/product-service \
+  -H 'Content-Type: application/json'
+  
