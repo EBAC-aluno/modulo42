@@ -54,7 +54,7 @@ curl -X GET \
   http://localhost:8090/api/customer-service \
   -H 'Content-Type: application/json'
 ```
-
+```bash
 curl -X POST \
   http://localhost:8090/api/product-service \
   -H 'Content-Type: application/json' \
@@ -64,7 +64,8 @@ curl -X POST \
 	"price": "37000"
     }
 }'
-  
+```
+```bash
 curl -X PUT \
   http://localhost:8090/api/product-service/52 \
   -H 'Content-Type: application/json' \
@@ -74,16 +75,20 @@ curl -X PUT \
 	"price": "37000"
     }
 }'
-
+```
+```bash
 curl -X DELETE \
   http://localhost:8090/api/product-service/52 \
   -H 'Content-Type: application/json'
-  
+```
+```bash
 curl -X GET \
   http://localhost:8090/api/product-service/1 \
   -H 'Content-Type: application/json'
-
+```
+```bash
 curl -X GET \
   http://localhost:8090/api/product-service \
   -H 'Content-Type: application/json'
-  
+```
+_
